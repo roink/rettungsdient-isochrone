@@ -170,3 +170,20 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+
+# Ignore everything in the ors directory
+ors/*
+
+# Allow the docker-compose.yml file at the top level of the ors directory
+!ors/docker-compose.yml
+
+# Allow the subdirectories but not their contents
+!ors/ors-docker/
+!ors/ors-docker/config/
+!ors/ors-docker/elevation_cache/
+!ors/ors-docker/graphs/
+!ors/ors-docker/files/
+!ors/ors-docker/logs/
+
+# Ignore everything inside the subdirectories
+ors/ors-docker/*/*
